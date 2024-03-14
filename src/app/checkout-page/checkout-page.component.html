@@ -1,0 +1,21 @@
+<ul class="item-list cart--item-list">
+    <li *ngFor="let item of cartItems">
+        <img
+          class="cart--item-icon"
+          src="assets/icons/{{ item[0].id }}.svg"
+          alt="{{ item[0].name }}"
+        />
+        <p>{{ item[0].name }}</p>
+        <span class="quantity-text center">{{item[1]}}</span>
+    </li>
+</ul>
+<div class="total-section">
+    <div>
+        <h3>Total</h3>
+    </div>
+    <div>
+        <span class="total-number">£{{ totalCost }}</span>
+    </div>
+</div>
+<!-- Doesnt ACTUALLY check you out! -->
+<button>CHECKOUT</button>

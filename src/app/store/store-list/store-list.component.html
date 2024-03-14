@@ -1,0 +1,25 @@
+<div class="center">
+    <span>
+        Filter Type: 
+        <select [(ngModel)]="filterType" (change)="filterAndSort()">
+            <option></option>
+            <option>Vegetable</option>
+            <option>Fruit</option>
+        </select>
+        Sort: 
+        <select [(ngModel)]="sortType" (change)="filterAndSort()">
+            <option></option>
+            <option>Price DESC</option>
+            <option>Price ASC</option>
+            <option>Name DESC</option>
+            <option>Name ASC</option>
+        </select>
+    </span>
+</div>
+<ul class="item-list store--item-list">
+<app-store-list-item
+    *ngFor="let item of itemsToShow"
+    [item]="item"
+>
+</app-store-list-item>
+</ul>

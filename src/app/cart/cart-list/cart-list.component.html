@@ -1,0 +1,14 @@
+<ul class="item-list cart--item-list">
+<app-cart-list-item
+    *ngFor="let item of cartItems"
+    [item]="item[0]"
+    [quantity]="item[1]"
+    (increaseQuantity)="increaseQuantity($event)"
+    (decreaseQuantity)="decreaseQuantity($event)"
+>
+</app-cart-list-item>
+</ul>
+<app-cart-total
+    [totalCost]="totalCost"
+>
+</app-cart-total>
